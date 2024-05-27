@@ -1,7 +1,7 @@
 {
-  "name": "newrelic-lambda-layers",
-  "version": "11.5.0",
-  "description": "New Relic Installer for serverless APM layers.",
+  "name": "newrelic-next-lambda-layers",
+  "version": "11.17.0",
+  "description": "New Relic's Next.js agent as a AWS Lambda layer.",
   "main": "",
   "files": [
     "../dist",
@@ -9,8 +9,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm install && mkdir -p node_modules/newrelic-lambda-wrapper && cp index.js node_modules/newrelic-lambda-wrapper && mkdir -p nodejs && cp -r node_modules nodejs && zip -rq ../dist/nodejs/NewRelicLayer.zip nodejs && rm -rf ./nodejs",
-    "clean": "rm ../dist/nodejs/NewRelicLayer.zip",
+    "build": "npm install && mkdir -p node_modules/newrelic-next-lambda-wrapper && cp index.js node_modules/newrelic-next-lambda-wrapper && mkdir -p nodejs && cp -r node_modules nodejs && zip -rq ../dist/nodejs/NewRelicNextLayer.zip nodejs && rm -rf ./nodejs",
+    "clean": "rm ../dist/nodejs/NewRelicNextLayer.zip",
     "lint": "eslint ./*.js test",
     "lint:fix": "eslint --fix ./*.js test",
     "test": "npm run lint && npm run test:unit && npm run test:integration",
@@ -21,16 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/newrelic/newrelic-lambda-layers.git"
+    "url": "git+https://github.com/wpoynter/newrelic-next-lambda-layers.git"
   },
   "author": "newrelic",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/newrelic/newrelic-lambda-layers/issues"
+    "url": "https://github.com/wpoynter/newrelic-next-lambda-layers/issues"
   },
-  "homepage": "https://github.com/newrelic/newrelic-lambda-layers#readme",
+  "homepage": "https://github.com/wpoynter/newrelic-next-lambda-layers#readme",
   "dependencies": {
-    "newrelic": "^11.5.0"
+    "@newrelic/next": "^0.9.0",
+    "newrelic": "^11.17.0"
   },
   "keywords": [
     "lambda",
