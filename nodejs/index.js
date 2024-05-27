@@ -11,6 +11,7 @@ if (process.env.LAMBDA_TASK_ROOT && typeof process.env.NEW_RELIC_SERVERLESS_MODE
 }
 
 const newrelic = require('newrelic')
+require('@newrelic/next')
 const fs = require('node:fs')
 const path = require('node:path')
 
